@@ -1,0 +1,35 @@
+// all button
+
+.btn-border-default {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $blue-default;
+    color: $blue-default;
+    background-color: transparent;
+    width: 170px;
+    height: 42px;
+    padding: 7px 18px;
+    display: block;
+
+    &:hover,&:focus {
+        color: $blue-default - 40;
+        border-color: $blue-default - 40;
+    }
+}
+
+.btn-full-big {
+    background-color: $blue-default;
+    color: white;
+    font-size: 18px;
+    padding: 15px 20px;
+    font-weight: 700;
+    width: 240px;
+    height: 55px;
+    border: none;
+
+    &:hover, &:focus {
+        background-color: $blue-default - 30;
+        color: white;
+        border: none;
+    }
+}

@@ -1,0 +1,11 @@
+@mixin transform-translate($value_x, $value_y) {
+    -webkit-transform: translate($value_x, $value_y);
+    -moz-transform: translate($value_x, $value_y);
+    transform: translate($value_x, $value_y);
+}
+
+@mixin transform-rotate($value) {
+    -webkit-transform: rotate(#{$value}deg);
+    -moz-transform: rotate(#{$value}deg);
+    transform: rotate(#{$value}deg);
+}

@@ -1,0 +1,149 @@
+//header
+
+.header {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    background: url('../images/home-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 70px; 
+    width: 100%;
+    padding: 0 30px;
+    overflow: hidden;
+    position: relative;
+
+
+    .left-item {
+        float: left;
+    }
+
+    .right-item {
+        float: right;
+
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+
+    .left-item,
+    .right-item {
+        margin-top: 20px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .header-container {
+        display: flex;
+        display: -webkit-flex;
+        margin-top: 20px;
+    }
+
+    .logo,.header-main-menu,.home-flex-title {
+        position: relative;
+        z-index: 10;
+    }
+
+    .logo {
+        display: block;
+        
+        img {
+            height: 40px;
+            width: auto;
+        }
+    }
+
+    .btn-toggle {
+        display: none;
+    }
+
+    .header-main-menu {
+        margin-left: auto;
+
+        .menu {
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+            }
+
+            .menu-item {
+                float: left;
+                padding: 0 4px;
+                
+                .menu-link {
+                    line-height: 40px;
+                    height: 40px;
+                    display: block;
+                    @include border-radius(4px);
+                    padding: 0 18px;
+                    color: white;
+                    border: 1px solid;
+                    border-color: transparent;
+                    letter-spacing: 0.2px;
+
+                    &:hover,
+                    &:focus {
+                        border-color: white;
+                        text-decoration: none;
+                    }
+                }
+
+                &.menu-item-object {
+                    .btn-menu-item-object {
+                        border-color: white;
+
+                        &:hover,
+                        &:focus {
+                            background-color: white;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //chi hien neu o trang HOME
+    .home-title-flex {
+        clear: both;
+
+        .home-flex-background {
+            background: url('../images/home-book.png') no-repeat;
+            background-position: top;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            z-index: 0;
+            @include transform-translate(-50%, 0%);
+        }
+       
+        
+
+        .home-flex-title {
+            display: block;
+            width: 600px;
+            margin: 120px auto 280px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 42px;
+            line-height: 1.6;
+            font-weight: 700;
+            color: white;
+        }
+    }
+
+}

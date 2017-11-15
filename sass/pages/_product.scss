@@ -1,0 +1,49 @@
+// Product
+
+
+.product-list {
+    margin-top: 50px;
+
+    .product-item {
+        margin-bottom: 40px;
+
+        a {
+            display: block;
+        }
+
+        .thumb {
+            overflow: hidden;
+            max-height: 194px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .content {
+            .name {
+                font-size: 18px;
+                margin-bottom: 4px;
+                font-weight: 700;
+
+                a {
+                    color: $text-color-default;
+                }
+            }
+
+            .time-update {
+                font-size: 14px;
+                color: $gray-6;
+
+                i {
+                    margin-right: 6px;
+                }
+
+                .time-value {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+}

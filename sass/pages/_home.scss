@@ -1,0 +1,207 @@
+// home
+
+.site-title {
+    font-size: 38px;
+    width: 650px;
+    text-align: center;
+    display: block;
+    margin: 60px auto 0;
+}
+
+
+.service {
+    .service-list {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .service-item {
+        text-align: center;
+        padding: 30px;
+        min-height: 195px;
+        @include border-radius(4px);
+        background-color: transparent;
+
+        a {
+            display: block;
+            &:hover,&:focus {
+                text-decoration: none;
+            }
+        }
+
+        .icon {
+            margin-bottom: 20px;
+
+            // img {
+            //     height: 55px;
+            //     width: auto;
+            //     margin: auto;
+                
+            // }
+
+            svg {
+                fill: $blue-default;
+                height: 60px;
+                width: auto;
+            }
+            
+        }
+
+        p {
+            font-size: 20px;
+            color: $text-color-default;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            background-color: $gray-fa;
+
+            svg {
+                fill: $text-color-default;
+            }
+        }
+    }
+}
+
+.about-us {
+    position: relative;
+
+    .about-us-warp {
+        @include border-radius(5px);
+        border: 5px solid white;
+        background-color: white;
+        position: relative;
+        z-index: 1;
+        @include box-shadow(0, 10px, 50px, $rgba-01);
+
+        .about-us-container {
+            background: url('../images/support-img.jpg') no-repeat;
+            background-size: 500px auto;
+            background-position: left center;
+            position: relative;
+            overflow: hidden;
+
+            &:before {
+                content: '';
+                background-color: white;
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 5%;
+                @include transform-rotate(80);
+            }
+
+            .content {
+                overflow: hidden;
+                margin-left: 41%;
+                position: relative;;
+                z-index: 5;
+                padding: 30px 90px;
+
+                .title {
+                    font-size: 28px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+
+
+            }
+        }
+    }
+}
+
+.newest-product {
+    background-color: $body-background;
+    padding: 60px 0;
+
+    .site-title {
+        max-width: 450px;
+        margin-top: 0;
+    }
+
+    .btn-border-default {
+        margin: auto;
+    }
+}
+
+.call-now-flex {
+    width: 850px;
+    @include border-radius(5px);
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    padding: 30px 60px;
+    @include box-shadow(0, 10px, 50px, $rgba-01);
+
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .call-now-container {
+        float: left;
+
+
+        p {
+            margin-bottom: 0;
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 38px;
+            margin-bottom: 0;
+        }
+    }
+
+    .call-now-action {
+        float: right;
+        padding-top: 15px;
+    }
+
+}
+
+*.half-background {
+    position: relative;
+
+    &:before,&:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &:before {
+        background-color: white;
+        height: 45%;
+        top: 0;
+    }
+
+    &:after {
+        background-color: $body-background;
+        height: 55%;
+        bottom: 0;
+    }
+
+    &.half-background-convert {
+        &:before {
+            background-color: $body-background;
+            height: 45%;
+            top: 0;
+        }
+    
+        &:after {
+            background-color: white;
+            height: 55%;
+            bottom: 0;
+        }
+    }
+}
+

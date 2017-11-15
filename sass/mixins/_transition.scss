@@ -1,0 +1,7 @@
+//all effect transition
+
+@mixin transition($name_trans, $value, $type_trans) {
+    -webkit-transition: $name_trans $value $type_trans;
+    -moz-transition: $name_trans $value $type_trans;
+    transition: $name_trans $value $type_trans;
+}
